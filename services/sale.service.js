@@ -37,12 +37,6 @@ async function getSales(productId) {
   }
   return await SaleRepository.getSales();}
 
-async function getSalesByProductId(productId) {
-  if (productId) {
-    return await SaleRepository.getSalesByProductId(productId);
-  }
-  return await SaleRepository.getSales();
-}
 
 async function getSale(id) {
   return await SaleRepository.getSale(id);
@@ -80,5 +74,5 @@ export default {
   getSale,
   deleteSale,
   updateSale,
-  getSalesByProductId,
+ // getSalesByProductId,
 };

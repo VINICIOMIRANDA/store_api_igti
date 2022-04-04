@@ -19,21 +19,21 @@ async function createSale(req, res, next) {
 
 async function getSales(req, res, next) {
   try {
-    res.send(await SaleService.getSales());
+    res.send(await SaleService.getSales(req.query.product_id));
     global.logger.info("GET /sale");
   } catch (err) {
     next(err);
   }
 }
 
-async function getSalesByProductId(req, res, next) {
+/*async function getSalesByProductId(req, res, next) {
     try {
       res.send(await SaleService.getSalesByProductId(req.query.product_id));
       global.logger.info("GET /sale products");
     } catch (err) {
       next(err);
     }
-  }
+  }*/
 
 async function getSale(req, res, next) {
   try {
@@ -71,4 +71,4 @@ async function updateSale(req, res, next) {
   }
 }
 
-export default { createSale, getSales, getSale, deleteSale, updateSale,getSalesByProductId };
+export default { createSale, getSales, getSale, deleteSale, updateSale,/*getSalesByProductId*/ };

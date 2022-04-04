@@ -40,7 +40,6 @@ async function getSalesByProductId(productId) {
   }
 }
 
-
 async function getSale(id) {
   const conn = await connect();
   try {

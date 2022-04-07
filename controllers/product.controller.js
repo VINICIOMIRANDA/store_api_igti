@@ -9,7 +9,7 @@ async function createProduct(req, res, next) {
       !product.description ||
       !product.value ||
       !product.stock ||
-      !product.supplier_id
+      !product.supplierId
     ) {
       throw new Error("Name, Descrição, Valor, Estoque, Codigo do Fornecedor e Address são obrigatórios.");
     }
@@ -55,12 +55,12 @@ async function updateProduct(req, res, next) {
     let product = req.body;
 
     if (
-      !product.product_id ||
+      !product.productId ||
       !product.name ||
       !product.description ||
       !product.value ||
       !product.stock ||
-      !product.supplier_id
+      !product.supplierId
     ) {
       throw new Error("Product ID, Name, Descrição, Valor, Estoque, Codigo do Fornecedor e Address são obrigatórios.");
     }

@@ -5,7 +5,7 @@ import Supplier from "./supplier.model.js";
 const Product = db.define(
   "products",
   {
-    productID: {
+    productId: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
@@ -30,6 +30,6 @@ const Product = db.define(
   },
   { underscored: true });
 
-Product.belongsTo(Supplier, { foreingKey: "supplierId"});
-
+Product.belongsTo(Supplier, { foreignKey : "supplierId"});
+                               
 export default Product;

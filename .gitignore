@@ -1,4 +1,5 @@
 /node_modules/
 *.log
 repositories/db.js
-dbcompg.js
+repositories/dbcompg.js
+repositories/mongo.db.js
